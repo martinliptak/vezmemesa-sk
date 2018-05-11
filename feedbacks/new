@@ -1,0 +1,18 @@
+if($("#feedback_form").hasClass('closed')){
+  $("#FeedbackMessage").val('');
+
+  $('#FeedbackThanks').hide();
+  $('#feedback_form input[type="submit"]').show();
+  
+  //open feedback
+  $("#feedback_form").animate({
+    width: "350px"
+  }, 500, 'swing');
+  $("#feedback_form").removeClass('closed');
+} else {
+  //hide feedback
+  $("#feedback_form").animate({
+    width: 0
+  }, 500, 'swing');
+  $("#feedback_form").addClass('closed');
+}
